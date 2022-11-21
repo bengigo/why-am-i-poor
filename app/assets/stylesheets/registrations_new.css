@@ -1,0 +1,23 @@
+#header-up {
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 60px
+}
+
+.back {
+}
+
+h2 {
+  color: white
+}
+
+.sign-up {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  background-color: var(--main-color);
+  border: none;
+}
