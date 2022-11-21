@@ -1,18 +1,9 @@
 class Ability
   include CanCan::Ability
+
+  def initialize(user)
+    return unless user.present?
+    can :manage, Expense, user: user
+    can :manage, Group, user: user
+  end
 end
-
-# an example from the readme
-# class Ability
-#   include CanCan::Ability
-
-#   def initialize(user)
-#     can :read, Post, public: true
-
-#     return unless user.present?  # additional permissions for logged in users (they can read their own posts)
-#     can :read, Post, user: user
-
-#     return unless user.admin?  # additional permissions for administrators
-#     can :read, Post
-#   end
-# end
