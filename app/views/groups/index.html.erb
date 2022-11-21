@@ -1,0 +1,12 @@
+<% if user_signed_in? %>
+  <p>if the user loggen in <br> HERE WILL BE THE LIST OF <em>GROUPS</em> (aka categories - or expense groups) <br> and a new group button at the bottom of the page</p>
+  <% else %>
+  <section id="splash">
+    <h1>WHY AM <br> I <br> POOR?</h1>
+    <div id="splash-links">
+      <%= link_to "LOG IN", "/users/sign_in", id: "splash-in", class: "splash-link" %>
+      <%= link_to "SIGN UP", "/users/sign_up", id: "splash-up", class: "splash-link" %>
+    </div>
+  </section>
+  <%# <p>if the user is not logged in <br> HERE WILL BE THE <em>SPLASH CONTENT</em></p> %>
+<% end %>
