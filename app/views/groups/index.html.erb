@@ -3,8 +3,10 @@
   <% else %>
   <section id="splash">
     <h1>WHY AM <br> I <br> POOR?</h1>
-    <%= link_to "LOG IN", "/users/sign_in" %>
-    <%= link_to "SIGN UP", "/users/sign_up" %>
+    <div id="splash-links">
+      <%= link_to "LOG IN", "/users/sign_in", id: "splash-in", class: "splash-link" %>
+      <%= link_to "SIGN UP", "/users/sign_up", id: "splash-up", class: "splash-link" %>
+    </div>
   </section>
-  <p>if the user is not logged in <br> HERE WILL BE THE <em>SPLASH CONTENT</em></p>
+  <%# <p>if the user is not logged in <br> HERE WILL BE THE <em>SPLASH CONTENT</em></p> %>
 <% end %>
