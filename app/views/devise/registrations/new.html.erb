@@ -1,27 +1,40 @@
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<section id="registration">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div id="header-up">
-    <%= link_to image_tag("back_icon.png"), root_path, class: "back" %>
-    <h2>Register</h2>
-    <div class="actions">
-    <%= f.submit "Sign up", class: "sign-up" %>
-  </div>
-  </div>
+    <div id="header-up">
+      <%= link_to image_tag("back_icon.png"), root_path, class: "back" %>
+      <h2>Register</h2>
+      <div class="actions">
+      <%= f.submit "Sign up", class: "sign-up" %>
+    </div>
+    </div>
 
-  <div class="field">
-    <%= f.text_field :name, autofocus: true, placeholder: "Full name" %>
-  </div>
-  
-  <div class="field">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
-  </div>
+    <div id="form-container">
 
-  <div class="field">
-    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password (minimum 6 characters)" %>
-  </div>
+    <div class="field">
+      <%= f.text_field :name, autofocus: true, placeholder: "Full name", class: 'input' %>
+    </div>
 
-  <div class="field">
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Passwprd" %>
-  </div>
-<% end %>
+    <hr>
+    
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: 'input' %>
+    </div>
+
+        <hr>
+
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password (minimum 6 characters)", class: 'input' %>
+    </div>
+
+        <hr>
+
+
+    <div class="field">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Passwprd", class: 'input' %>
+    </div>
+    </div>
+  <% end %>
+</section>

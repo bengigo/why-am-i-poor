@@ -1,3 +1,16 @@
+#registration {
+  height: 100vh;
+  background-color: #f5f6f8;
+}
+
+#form-container {
+  background-color: white;
+  border: 1px solid black;
+  border-left: 0;
+  border-right: 0;
+  margin-top: 10px;
+}
+
 #header-up {
   background-color: var(--main-color);
   display: flex;
@@ -7,8 +20,6 @@
   height: 60px
 }
 
-.back {
-}
 
 h2 {
   color: white
@@ -20,4 +31,22 @@ h2 {
   margin-right: 15px;
   background-color: var(--main-color);
   border: none;
+}
+
+.field {
+  height: 45px;
+}
+
+.input {
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+hr {
+  margin-left: 10px;
+}
+
+::placeholder {
+  padding-left: 10px;
 }
