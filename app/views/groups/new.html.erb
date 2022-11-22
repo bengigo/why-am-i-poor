@@ -6,8 +6,8 @@
       <h2>NEW GROUP</h2>
       <%# log out %>
       <div class="actions">
-        <%# <%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo: false}, class: "sign-out" %> 
-        <%= link_to "Sign out", "#" "sign-out" %>
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo: false}, class: "sign-out" %> 
+        <%# <%= link_to "Sign out", "#" "sign-out" %> 
       </div>
     </div>
   </div>
@@ -23,7 +23,7 @@
     </div>
     </div>
     <div class="actions">
-      <%= f.submit "Add group", id: 'add-group' %>
+      <%= f.submit "Save", id: 'add-group' %>
     </div>
   <% end %>
 </section>
