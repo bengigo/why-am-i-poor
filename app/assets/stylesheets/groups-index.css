@@ -1,3 +1,5 @@
+/* style rules for the splas screen are on application.css */
+
 #home-page {
   height: 100vh;
   background-color: #f5f6f8;
@@ -22,7 +24,6 @@
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  
 }
 
 #add-group-link {

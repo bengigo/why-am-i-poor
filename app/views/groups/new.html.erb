@@ -6,12 +6,11 @@
       <%# log out %>
       <div class="actions">
         <%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo: false}, class: "sign-out" %> 
-        <%# <%= link_to "Sign out", "#" "sign-out" %> 
       </div>
     </div>
 
-  <div class="form-container">
   <%= form_for @group do |f| %>
+    <div class="form-container">
     <div class="field">
       <%= f.text_field :name, placeholder: 'Group Name', class: 'input' %>
     </div>
