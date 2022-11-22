@@ -11,7 +11,7 @@
   margin-top: 10px;
 }
 
-#header-up {
+.header {
   background-color: var(--main-color);
   display: flex;
   align-items: center;
