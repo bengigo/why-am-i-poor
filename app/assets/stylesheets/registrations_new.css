@@ -17,12 +17,11 @@
   align-items: center;
   justify-content: space-between;
   width: 100vw;
-  height: 60px
+  height: 60px;
 }
 
-
 h2 {
-  color: white
+  color: white;
 }
 
 .sign-up {
@@ -50,4 +49,3 @@ hr {
 ::placeholder {
   padding-left: 10px;
 }
-
