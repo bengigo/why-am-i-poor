@@ -1,19 +1,16 @@
 <section id="new-group">
   <%# header %>
-  <div class="header">
     <div class="header">
       <%= link_to image_tag("back_icon.png"), groups_path, class: "back" %>
       <h2>NEW GROUP</h2>
       <%# log out %>
       <div class="actions">
         <%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo: false}, class: "sign-out" %> 
-        <%# <%= link_to "Sign out", "#" "sign-out" %> 
       </div>
     </div>
-  </div>
 
-  <div class="form-container">
   <%= form_for @group do |f| %>
+    <div class="form-container">
     <div class="field">
       <%= f.text_field :name, placeholder: 'Group Name', class: 'input' %>
     </div>
