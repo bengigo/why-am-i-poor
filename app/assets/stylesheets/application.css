@@ -30,6 +30,7 @@
   --text-color: #434b54;
 }
 
+/* splash screen below */
 #splash {
   height: calc(100vh - 30px);
   display: flex;
@@ -69,3 +70,5 @@ h1 {
 #splash-up {
   color: var(--text-color);
 }
+
+/* splash screen above */

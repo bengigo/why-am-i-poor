@@ -1,0 +1,29 @@
+#new-session {
+  height: 100vh;
+  background-color: #f5f6f8;
+}
+
+#header-in {
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 60px;
+}
+
+.sign-in {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  background-color: var(--main-color);
+  border: none;
+}
+
+#forgot {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  text-decoration: none;
+  color: var(--text-color);
+}
