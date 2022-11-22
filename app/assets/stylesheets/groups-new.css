@@ -1,0 +1,15 @@
+#new-group {
+  height: 100vh;
+  background-color: #f5f6f8;
+}
+
+#add-group {
+  width: 100%;
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  background-color: var(--main-color);
+  border: none;
+  height: 45px;
+  margin-top: 10px;
+}
