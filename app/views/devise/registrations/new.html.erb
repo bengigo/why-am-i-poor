@@ -7,34 +7,25 @@
       <h2>Register</h2>
       <div class="actions">
       <%= f.submit "Sign up", class: "sign-up" %>
-    </div>
-    </div>
-
-    <div id="form-container">
-
-    <div class="field">
-      <%= f.text_field :name, autofocus: true, placeholder: "Full name", class: 'input' %>
+      </div>
     </div>
 
-    <hr>
-    
-    <div class="field">
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: 'input' %>
-    </div>
-
-        <hr>
-
-
-    <div class="field">
-      <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password (minimum 6 characters)", class: 'input' %>
-    </div>
-
-        <hr>
-
-
-    <div class="field">
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Passwprd", class: 'input' %>
-    </div>
+    <div class="form-container">
+      <div class="field">
+        <%= f.text_field :name, autofocus: true, placeholder: "Full name", class: 'input' %>
+      </div>
+      <hr>
+      <div class="field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: 'input' %>
+      </div>
+      <hr>
+      <div class="field">
+        <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password (minimum 6 characters)", class: 'input' %>
+      </div>
+      <hr>
+      <div class="field">
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Passwprd", class: 'input' %>
+      </div>
     </div>
   <% end %>
 </section>

@@ -3,7 +3,7 @@
   background-color: #f5f6f8;
 }
 
-#form-container {
+.form-container {
   background-color: white;
   border: 1px solid black;
   border-left: 0;
@@ -50,3 +50,4 @@ hr {
 ::placeholder {
   padding-left: 10px;
 }
+
