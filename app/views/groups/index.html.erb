@@ -1,23 +1,40 @@
-<% if user_signed_in? %>
-  <%# there should be a header here with groups title and sign out link%>
-  <%# <p>if the user loggen in <br> HERE WILL BE THE LIST OF <em>GROUPS</em> (aka categories - or expense groups) <br> and a new group button at the bottom of the page</p> %>
-  <ul>
-    <li>placeholder for the list of groups</li>
-    <li>placeholder for the list of groups</li>
-    <li>placeholder for the list of groups</li>
-    <li>placeholder for the list of groups</li>
-  </ul>
-  <%# a button to add a new group %>
-  <%= link_to "Add a new group", new_group_path, class: 'button' %>
-  <% else %>
-  <section id="splash">
-    <h1>WHY AM <br> I <br> POOR?</h1>
-    <div id="splash-links">
-      <%= link_to "LOG IN", "/users/sign_in", id: "splash-in", class: "splash-link" %>
-      <%= link_to "SIGN UP", "/users/sign_up", id: "splash-up", class: "splash-link" %>
+<section id="home-page">
+  <% if user_signed_in? %>
+    <div class="header">
+      <%= link_to image_tag("back_icon.png"), groups_path, class: "back" %>
+      <h2>GROUPS</h2>
+      <div class="actions">
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo: false}, class: "sign-out" %> 
+      </div>
     </div>
-  </section>
-  <p>if the user is not logged in <br> HERE WILL BE THE <em>SPLASH CONTENT</em></p>
-  <section id="group-list">
-  </section>
-<% end %>
+    <div class="groups">
+      <% @groups.each do |group| %>
+        <div class="group">
+          <div class="group-icon">
+            <%= image_tag('temp_img.png') %>
+          </div>
+          <div class="group-name">
+            <%= group.name %>
+          </div>
+          <div class="group-total">
+            0
+          <%# 0 to be changes with the group total after adding some expenses %>
+          </div>
+        </div>
+        <%# total amount of this group %>
+      <% end %>
+    </div>
+    <%= link_to "Add a new group", new_group_path, id: 'add-group-link' %>
+    <% else %>
+    <section id="splash">
+      <h1>WHY AM <br> I <br> POOR?</h1>
+      <div id="splash-links">
+        <%= link_to "LOG IN", "/users/sign_in", id: "splash-in", class: "splash-link" %>
+        <%= link_to "SIGN UP", "/users/sign_up", id: "splash-up", class: "splash-link" %>
+      </div>
+    </section>
+    <p>if the user is not logged in <br> HERE WILL BE THE <em>SPLASH CONTENT</em></p>
+    <section id="group-list">
+    </section>
+  <% end %>
+</section>
