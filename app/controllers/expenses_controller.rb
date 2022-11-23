@@ -26,12 +26,12 @@ class ExpensesController < ApplicationController
 
   def create
     @group = current_user.groups.find(params[:group_id])
-    @expense = @group.expenses.create(name: params[:expense][:name], amount: params[:expense][:amount], user_id: current_user.id)
+    @expense = @group.expenses.create(name: params[:expense][:name], amount: params[:expense][:amount],
+                                      user_id: current_user.id)
     if @expense.save
       redirect_to group_expenses_path
     else
       render :new
     end
   end
-
 end
