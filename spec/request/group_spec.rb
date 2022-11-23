@@ -1,8 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "Groups", type: :request do
+RSpec.describe 'Groups', type: :request do
   describe 'GET #index' do
-
     # before do
     #   @user = User.create(name: 'testUser', email: 'user@mail.com', password: 'password')
     #   @group = Group.create(name: 'testGroup', icon: 'dndndndndndndn')
@@ -12,7 +11,6 @@ RSpec.describe "Groups", type: :request do
       @user = User.create(name: 'testUser', email: 'user@mail.com', password: 'password')
       @group = Group.create(name: 'testGroup', icon: 'dndndndndndndn')
     end
-
 
     it 'is an HTTP request' do
       get groups_path
