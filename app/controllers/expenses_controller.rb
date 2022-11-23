@@ -1,8 +1,8 @@
 class ExpensesController < ApplicationController
   def index
     @group = current_user.groups.find(params[:group_id])
-    # @total = @expenses.sum(:amount)
     @expenses = @group.expenses.all.order(created_at: :desc)
+    @total = @expenses.sum(:amount)
   end
 
   def show
