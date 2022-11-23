@@ -1,4 +1,6 @@
-example_id                          | status | run_time        |
------------------------------------ | ------ | --------------- |
-./spec/request/group_spec.rb[1:1:1] | passed | 0.07734 seconds |
-./spec/request/group_spec.rb[1:1:2] | passed | 0.00538 seconds |
+example_id                            | status | run_time        |
+------------------------------------- | ------ | --------------- |
+./spec/request/expense_spec.rb[1:1:1] | passed | 0.00542 seconds |
+./spec/request/expense_spec.rb[1:1:2] | passed | 0.09949 seconds |
+./spec/request/group_spec.rb[1:1:1]   | passed | 0.09038 seconds |
+./spec/request/group_spec.rb[1:1:2]   | passed | 0.00467 seconds |
