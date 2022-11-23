@@ -1,0 +1,19 @@
+<p>welcome to new expense form</p>
+
+<%# form for new expense %>
+<%= form_with(model: @expense, url: group_expenses_path ) do |f| %>
+  <div>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :amount %><br>
+    <%= f.number_field :amount %>
+  </div>
+
+  <%# submit %>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
