@@ -1,10 +1,8 @@
 class ExpensesController < ApplicationController
   def index
-    # @group = current_user.groups.find(params[:group_id])
-    # @expenses = @group.expenses.order(created_at: :desc)
-    # @total = @expenses.sum(:amount)
     @group = current_user.groups.find(params[:group_id])
-    @expenses = Expense.where(group_id: params[:group_id])
+    # @total = @expenses.sum(:amount)
+    @expenses = @group.expenses.all.order(created_at: :desc)
   end
 
   def show
@@ -15,10 +13,20 @@ class ExpensesController < ApplicationController
     @expense = Expense.new
   end
 
+  # def create
+  #   @expense = Expense.new(expense_params)
+  #   @expense.user_id = current_user.id
+  #   # @expense.group_id = params[:group_id]
+  #   if @expense.save
+  #     redirect_to group_expenses_path
+  #   else
+  #     render :new
+  #   end
+  # end
+
   def create
-    @expense = Expense.new(expense_params)
-    @expense.user_id = current_user.id
-    # @expense.group_id = params[:group_id]
+    @group = current_user.groups.find(params[:group_id])
+    @expense = @group.expenses.create(name: params[:expense][:name], amount: params[:expense][:amount], user_id: current_user.id)
     if @expense.save
       redirect_to group_expenses_path
     else
@@ -26,8 +34,4 @@ class ExpensesController < ApplicationController
     end
   end
 
-  def expense_params
-    # params.permit(:name, :amount, :group_id)
-    params.require(:expense).permit(:name, :amount)
-  end
 end

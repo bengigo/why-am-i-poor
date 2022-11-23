@@ -17,6 +17,20 @@
 </div>
 
 <%# list of expenses %>
+<div class="list">
+  <% @expenses.each do |expense| %>
+    <div class="expense">
+      <div class="name">
+        <h3><%= expense.name %></h3>
+      </div>
+      <div class="amount">
+        <h3><%= expense.amount %></h3>
+      </div>
+    </div>
+  <% end %>
+
+<%# list of expenses %>
+
 
 <%# add new expense %>
 <%= link_to "New Expense", new_group_expense_path(@group), class: "add-expense" %>
