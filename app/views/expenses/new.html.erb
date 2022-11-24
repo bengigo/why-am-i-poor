@@ -1,18 +1,26 @@
-<p>welcome to new expense form</p>
+<section id="new-expense">
+    <div class="header">
+      <%= link_to image_tag("back_icon.png"), groups_path, class: "back" %>
+      <h2>NEW EXPENSE</h2>
+      <%# log out %>
+      <div class="actions">
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo: false}, class: "sign-out" %> 
+      </div>
+    </div>
+  
+  <%= form_with(model: @expense, url: group_expenses_path ) do |f| %>
+    <div class="form-container">
+      <div class="field">
+        <%= f.text_field :name, placeholder: 'Name', class: 'input' %>
+      </div>
+      <hr>
+      <div class="field">
+        <%= f.number_field :amount, placeholder: 'Amount', class: 'input' %>
+      </div>
 
-<%# form for new expense %>
-<%= form_with(model: @expense, url: group_expenses_path ) do |f| %>
-  <div>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-
-  <div>
-    <%= f.label :amount %><br>
-    <%= f.number_field :amount %>
-  </div>
-
-  <div>
-    <%= f.submit %>
-  </div>
+      <div class="actions">
+      <%= f.submit "Save", id: 'add-expense' %>
+      </div>
+    </div>
 <% end %>
+</section>
