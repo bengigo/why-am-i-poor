@@ -26,9 +26,13 @@
   height: 35px;
 }
 
-/* .group-name {
-  text-decoration: none;
-} */
+.group-name {
+  color: var(--text-color);
+}
+
+.group-total {
+  color: var(--text-color);
+}
 
 .group-links {
   width: 100%;
