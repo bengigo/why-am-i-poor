@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :groups do
     resources :expenses
   end
-  resources :group_expenses
+  resources :expenses_groups
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end

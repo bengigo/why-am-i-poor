@@ -3,7 +3,6 @@
     <div class="header">
       <%= link_to image_tag("back_icon.png"), groups_path, class: "back" %>
       <h2>NEW GROUP</h2>
-      <%# log out %>
       <div class="actions">
         <%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo: false}, class: "sign-out" %> 
       </div>

@@ -1,7 +1,6 @@
 <section id="home-page">
   <% if user_signed_in? %>
     <div class="header">
-      <%= link_to image_tag("back_icon.png"), groups_path, class: "back" %>
       <h2>GROUPS</h2>
       <div class="actions">
         <%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo: false}, class: "sign-out" %> 
@@ -12,14 +11,13 @@
         <%= link_to group_expenses_path(group_id: group.id), class: 'group-links' do %>
           <div class="group">
             <div class="group-icon">
-              <%= image_tag('temp_img.png') %>
+              <img class="group-icon" src=<%= group.icon %> >
             </div>
             <div class="group-name">
               <%= group.name %>
             </div>
             <div class="group-total">
-              0
-            <%# 0 to be changes with the group total after adding some expenses %>
+              <%= group.expenses.sum(:amount) %>
             </div>
           </div>
         <% end %>        

@@ -1,5 +1,4 @@
 <section id="expenses">
-<%# put the new expense or whatever button or probably link on this page %>
 
 <div class="header">
   <%= link_to image_tag("back_icon.png"), groups_path, class: "back" %>
@@ -10,9 +9,7 @@
 </div>
 
 <div class="summ">
-  <%# name of the group %>
   <p><%= @group.name.upcase %></p>
-  <%# <h3>CHOSEN GROUP NAME</h3> %>
   <p>TOTAL: <strong> <%= @total %> </strong> </P>
 </div>
 
