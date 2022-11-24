@@ -12,7 +12,7 @@
         <%= link_to group_expenses_path(group_id: group.id), class: 'group-links' do %>
           <div class="group">
             <div class="group-icon">
-              <%= image_tag('temp_img.png') %>
+              <img class="group-icon" src=<%= group.icon %> >
             </div>
             <div class="group-name">
               <%= group.name %>

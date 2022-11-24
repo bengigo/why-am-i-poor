@@ -21,6 +21,11 @@
   align-items: center;
 }
 
+.group-icon {
+  width: 35px;
+  height: 35px;
+}
+
 .group-links {
   width: 100%;
 }
