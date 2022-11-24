@@ -12,7 +12,7 @@ RSpec.describe 'Users', type: :model do
 
   it 'name should be present' do
     @user.name = 'testUser'
-    expect(@user.name).to eq('testUser') 
+    expect(@user.name).to eq('testUser')
   end
 
   it 'email should be present' do
