@@ -5,13 +5,17 @@
       <%= link_to image_tag("back_icon.png"), root_path, class: "back" %>
       <h2>LOGIN</h2>
       <div class="actions">
-        <%= f.submit "Log in", class: "sign-in" %>
+       <%= f.submit "Log in", class: "sign-in" %>
       </div>
+      
+
+
+
     </div>
 
     <div class="form-container">
       <div class="field">
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: 'input' %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: 'input'%>
       </div>
       <hr>
       <div class="field">
