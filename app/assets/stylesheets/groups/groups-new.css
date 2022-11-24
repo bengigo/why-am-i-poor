@@ -8,7 +8,9 @@
   color: white;
   text-decoration: none;
   margin-right: 15px;
-  background-color: var(--main-color);
+  background-color: var(--second-color);
+  position: fixed;
+  bottom: 0;
   border: none;
   height: 45px;
   margin-top: 10px;

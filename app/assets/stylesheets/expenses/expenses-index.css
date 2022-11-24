@@ -27,7 +27,7 @@
 #add-expense {
   position: fixed;
   bottom: 0;
-  background-color: var(--main-color);
+  background-color: var(--second-color);
   height: 45px;
   width: 100%;
   color: white;
