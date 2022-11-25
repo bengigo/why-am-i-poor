@@ -1,0 +1,36 @@
+<section id="home-page">
+  <% if user_signed_in? %>
+    <div class="header">
+      <h2>GROUPS</h2>
+      <div class="actions">
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo: false}, class: "sign-out" %> 
+      </div>
+    </div>
+    <div class="groups">
+      <% @groups.each do |group| %>
+        <%= link_to group_expenses_path(group_id: group.id), class: 'group-links' do %>
+          <div class="group">
+            <div class="group-icon">
+              <img class="group-icon" src=<%= group.icon %> >
+            </div>
+            <div class="group-name">
+              <%= group.name %>
+            </div>
+            <div class="group-total">
+              <%= group.expenses.sum(:amount) %>
+            </div>
+          </div>
+        <% end %>        
+      <% end %>
+    </div>
+    <%= link_to "Add a new group", new_group_path, id: 'add-group-link' %>    
+    <% else %>
+    <section id="splash">
+      <h1>WHY AM <br> I <br> POOR?</h1>
+      <div id="splash-links">
+        <%= link_to "LOG IN", "/users/sign_in", id: "splash-in", class: "splash-link" %>
+        <%= link_to "SIGN UP", "/users/sign_up", id: "splash-up", class: "splash-link" %>
+      </div>
+    </section>
+  <% end %>
+</section>

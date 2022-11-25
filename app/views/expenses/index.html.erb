@@ -1,0 +1,29 @@
+<section id="expenses">
+
+<div class="header">
+  <%= link_to image_tag("back_icon.png"), groups_path, class: "back" %>
+  <h2>EXPENSES</h2>
+  <div class="actions">
+    <%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo: false}, class: "sign-out" %> 
+  </div>
+</div>
+
+<div class="summ">
+  <p><%= @group.name.upcase %></p>
+  <p>TOTAL: <strong> <%= @total %> </strong> </P>
+</div>
+
+<div id="expense-list">
+  <% @expenses.each do |expense| %>
+    <div class="expense">
+      <div class="name">
+        <p><%= expense.name %></p>
+      </div>
+      <div class="amount">
+        <p><%= expense.amount %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+<%= link_to "New Expense", new_group_expense_path(@group), id: "add-expense" %>
+</section>

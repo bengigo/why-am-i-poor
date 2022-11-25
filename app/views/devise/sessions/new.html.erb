@@ -1,0 +1,31 @@
+<section id="new-session">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    <div class="header">
+      <%= link_to image_tag("back_icon.png"), root_path, class: "back" %>
+      <h2>LOGIN</h2>
+      <div class="actions">
+       <%= f.submit "Log in", class: "sign-in" %>
+      </div>
+      
+
+
+
+    </div>
+
+    <div class="form-container">
+      <div class="field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: 'input'%>
+      </div>
+      <hr>
+      <div class="field">
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password', class: 'input' %>
+      </div>
+    </div>
+  <% end %>
+
+  <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+  <%= link_to "Forgot password?", new_password_path(resource_name), id: 'forgot' %><br />
+  <% end %>
+
+</section>

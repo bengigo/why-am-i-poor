@@ -1,0 +1,74 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #3778c2;
+  --second-color: #5fb523;
+  --text-color: #434b54;
+}
+
+/* splash screen below */
+#splash {
+  height: calc(100vh - 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 15px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin: auto;
+  color: var(--text-color);
+}
+
+#splash-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.splash-link {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+#splash-in {
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 3px;
+}
+
+#splash-up {
+  color: var(--text-color);
+}
+
+/* splash screen above */

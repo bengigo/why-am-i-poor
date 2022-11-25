@@ -1,0 +1,10 @@
+#add-expense {
+  width: 100%;
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  background-color: var(--second-color);
+  border: none;
+  height: 45px;
+  margin-top: 10px;
+}
